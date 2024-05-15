@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el IMC y la Edad de la Mascota</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Calculadora de IMC y Edad de la Mascota</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Calcular el IMC</h2>
+        <form id="calcularIMCForm">
+            <div class="form-group">
+                <label for="peso_lb">Peso (lb):</label>
+                <input type="number" class="form-control" id="peso_lb" name="peso_lb" placeholder="Ingrese el peso en libras">
+            </div>
+
+            <div class="form-group">
+                <label for="altura_pulgadas">Altura (pulgadas):</label>
+                <input type="number" class="form-control" id="altura_pulgadas" name="altura_pulgadas" placeholder="Ingrese la altura en pulgadas">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calcularIMC()">Calcular IMC</button>
+        </form>
+        <div id="resultadoIMC" class="mt-3"></div>
+        <h2>Calcular la Edad de la Mascota</h2>
+        <form id="calcularEdadMascotaForm">
+            <div class="form-group">
+                <label for="edad_mascota">Edad de la mascota:</label>
+                <input type="number" class="form-control" id="edad_mascota" name="edad_mascota" placeholder="Ingrese la edad de la mascota">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calcularEdadMascotaFormula()">Calcular con la fórmula</button>
+            <button type="button" class="btn btn-secondary" onclick="calcularEdadMascotaSieteAnios()">Calcular según los 7 años</button>
+        </form>
+        <div id="resultadoEdadMascota" class="mt-3"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="calculo.js" defer></script>
+</body>
+
+</html>
